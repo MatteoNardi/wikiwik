@@ -156,3 +156,6 @@ DATABASES = {
 # Parse secret key from $SECRET_KEY 
 import os
 SECRET_KEY = os.environ['SECRET_KEY']
+
+# Enable more debug informations when running on local machine
+INTERNAL_IPS = ("127.0.0.1")
