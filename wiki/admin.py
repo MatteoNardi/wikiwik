@@ -1,5 +1,5 @@
 from django.contrib import admin
-from wiki.models import Page
+from wiki.models import Page, Picture
 
 class PageAdmin(admin.ModelAdmin):
     fields = ['title', 'slug', 'content']
@@ -8,4 +8,11 @@ class PageAdmin(admin.ModelAdmin):
         obj.author = request.user
         obj.save()
 
+
+class PictureAdmin(admin.ModelAdmin):
+    fields = ['title', 'picture']
+    list_display = ('title',)
+
+
 admin.site.register(Page, PageAdmin)
+admin.site.register(Picture, PictureAdmin)

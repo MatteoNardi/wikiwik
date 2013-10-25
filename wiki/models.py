@@ -12,3 +12,8 @@ class Page(models.Model):
 
     class Meta:
         ordering = ["-pub_date"]
+
+class Picture(models.Model):
+	title = models.CharField(max_length=200)
+	picture = models.ImageField(upload_to='img')
+		
