@@ -2,7 +2,7 @@ from django.contrib import admin
 from wiki.models import Page, Picture
 
 class PageAdmin(admin.ModelAdmin):
-    fields = ['title', 'slug', 'content']
+    fields = ['title', 'slug', 'content',  'css', 'mod_date']
 
     def save_model(self, request, obj, form, change):
         obj.author = request.user
