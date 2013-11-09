@@ -16,6 +16,9 @@
 	<!-- Load style from CSS -->
 	<link rel="stylesheet" href="{% static "wiki/css/style.css" %}" media="screen">
 	{% endif %}
+	<style type="text/css">
+{{ page.css }}
+	</style>
 
 	<title>{{ page.title }}</title>
 </head>
